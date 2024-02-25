@@ -1,13 +1,81 @@
 ---
 title: "Post With Code"
-author: "Harlow Malloc"
+author: "Isabel"
+format: html
 date: "2024-02-25"
-categories: [news, code, analysis]
+categories: [Librairie olympicsWeather, Tests, analysis]
 image: "image.jpg"
 ---
 
-This is a post with executable code.
+## Librairie olympicsWeather
+
+Le package `olympicsWeather` offre une solution simple et interactive pour accéder aux prévisions météorologiques des sites olympiques. Utilisant des graphiques interactifs, il permet aux utilisateurs d'explorer en profondeur les données météorologiques.
+
+### Caractéristiques principales
+
+-   **Graphiques interactifs** : Grâce à `plotly`, le package produit des visualisations interactives des données météorologiques, améliorant ainsi l'expérience utilisateur par une exploration dynamique des prévisions.
+
+-   **Facilité d'utilisation** : Les prévisions sont accessibles via des coordonnées GPS ou des noms de lieux, facilitant l'accès aux données météorologiques sans expertise technique spécifique.
+
+-   **Intégration de packages R** : `olympicsWeather` s'appuie sur des packages tels que `httr` pour les requêtes web, `jsonlite` pour le traitement JSON, et `tibble` pour la manipulation de données, optimisant ainsi le processus d'analyse.
+
+### Installation
+
+Le package `olympicsWeather` est disponible sur GitHub et peut être installé en utilisant le package `remotes`. Si vous n'avez pas encore installé `remotes`, commencez par le faire avec la commande `install.packages("remotes")`.
+
+Ensuite, installez `olympicsWeather` en utilisant la commande suivante :
 
 ```{r}
-1 + 1
+#| eval: false
+
+remotes::install_github("isabel6198/olympicsWeather")
+
 ```
+
+## Prévisions météo à 7 jours pour le stade de France
+
+```{r}
+#| warning: false
+# librairie 
+library(olympicsWeather)
+
+
+# Obtenir les prévisions météorologiques à partir d'un lieu exacte
+meteo <- get_forecast("Stade de France, Saint-Denis, France")
+meteo
+# Visualer les données
+graphique <- visualiser_temperatures(meteo)
+graphique
+
+```
+
+## Prévisions météo pour les coordonnées GPS
+
+```{r}
+#| warning: false
+
+# Obtenir les prévisions météorologiques à partir de Coordonnées GPS 
+gps <- c( 43.276703, 5.334791)
+
+# Obtenir les prévisions météorologiques
+meteo <- get_forecast(gps)
+meteo
+# Visualer les données
+graphique <- visualiser_temperatures(meteo)
+graphique
+
+```
+
+## Prévisions météo pour Tahiti
+
+```{r}
+#| warning: false
+
+# Obtenir les prévisions météorologiques 
+meteo <- get_forecast("Tahiti")
+# Visualer les données
+graphique <- visualiser_temperatures(meteo)
+graphique
+
+```
+

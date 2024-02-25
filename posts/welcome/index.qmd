@@ -1,0 +1,14 @@
+---
+title: "Bienvenue sur mon Blog"
+author: "Isabel PALACIO"
+date: "2024-02-22"
+categories: [R, Stats]
+---
+
+# Bienvenue !
+
+Je suis ravie de vous accueillir sur mon blog où je documente mon parcours en data science et programmation.
+
+![](frailejon.png)
+
+

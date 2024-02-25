@@ -1,0 +1,15 @@
+---
+title: "Data Science avec Isabel"
+description: "Découvrez des articles sur la data science, la programmation en R et Python, et bien plus encore."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+Bienvenue sur mon blog ! Ici, je partage mes projets, sur tout ce qui touche à l'analyse de données, la programmation en R et Python, et bien plus. Restez à jour en explorant mes derniers articles ci-dessous.

@@ -1,0 +1,15 @@
+---
+title: "À Propos"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com/isabel6198
+---
+
+Ce premier blog est le résultat du cours de R avancé donné dans le cadre du master 1er Année ECAP, du IAE de Nantes.

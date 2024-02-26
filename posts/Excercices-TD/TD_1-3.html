@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-02-25">
+
+<title>my_blog - TD_1_3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">my_blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">À Propos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">TD_1_3</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">TD</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 25, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># penser à vérifer le chemin de travail </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Excercices-TD"</code></pre>
+</div>
+</div>
+<section id="td-1" class="level1">
+<h1>TD 1</h1>
+<p>Exercice</p>
+<p>Pour cet exercice, nous allons télécharger un jeu de données issu de <a href="https://data.gouv.fr" class="uri">https://data.gouv.fr</a> sur les infrastructures olympiques des JO 2024 à Paris.</p>
+<p>L’objectif de cet exercice est d’utiliser uniquement des fonctions de R base. - pas de librairie tierce sauf mention contraire.</p>
+<section id="téléchargement-jeu-de-données-depuis-le-site" class="level2">
+<h2 class="anchored" data-anchor-id="téléchargement-jeu-de-données-depuis-le-site">2. Téléchargement jeu de données depuis le site</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">"https://www.data.gouv.fr/fr/datasets/r/3f8ea372-3847-495d-9b93-c4a76d553166"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data_ex <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(url, <span class="at">sep =</span> <span class="st">";"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data_ex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "geo_point"                      "nom"                           
+[3] "sites_olympiques_paralympiques" "sports"                        </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(data_ex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 31  4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data_ex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   31 obs. of  4 variables:
+ $ geo_point                     : chr  "48.841319, 2.253076" "48.924388, 2.359871" "48.751095, 2.0759" "48.788046, 2.034987" ...
+ $ nom                           : chr  "Parc des Princes" "Stade de France" "Golf national" "Vélodrome National de Saint-Quentin-en-Yvelines" ...
+ $ sites_olympiques_paralympiques: chr  "Site olympique" "Site olympique,Site paralympique" "Site olympique" "Site olympique,Site paralympique" ...
+ $ sports                        : chr  "Football" "Athlétisme,Para athlétisme,Rugby" "Golf" "Cyclisme sur piste,Para cyclisme sur piste" ...</code></pre>
+</div>
+</div>
+<p>Le nombre de lignes est de 31 pour 4 colonnes nomées : geo_point, nom, sites_olympiques_paralympiques, sports</p>
+</section>
+<section id="et-4-combien-y-a-til-de-sites-olympiques-et-paralympiques" class="level2">
+<h2 class="anchored" data-anchor-id="et-4-combien-y-a-til-de-sites-olympiques-et-paralympiques">3 et 4 Combien y a t’il de sites olympiques et paralympiques ?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data_ex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            geo_point                                             nom
+1 48.841319, 2.253076                                Parc des Princes
+2 48.924388, 2.359871                                 Stade de France
+3   48.751095, 2.0759                                   Golf national
+4 48.788046, 2.034987 Vélodrome National de Saint-Quentin-en-Yvelines
+5  48.84732, 2.245501                             Stade Roland Garros
+6 48.911184, 2.546395                                Clichy-sous-Bois
+    sites_olympiques_paralympiques                                     sports
+1                   Site olympique                                   Football
+2 Site olympique,Site paralympique           Athlétisme,Para athlétisme,Rugby
+3                   Site olympique                                       Golf
+4 Site olympique,Site paralympique Cyclisme sur piste,Para cyclisme sur piste
+5 Site olympique,Site paralympique                Tennis,Tennis fauteuil,Boxe
+6                Site paralympique                    Para cyclisme sur route</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(data_ex<span class="sc">$</span>sites_olympiques_paralympiques )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+                                                   Site olympique 
+                               2                               10 
+Site olympique,Site paralympique                Site paralympique 
+                              16                                3 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sites_olympiques <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sites_paralympique <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (site <span class="cf">in</span> data_ex<span class="sc">$</span>sites_olympiques_paralympiques) {</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>( <span class="fu">grepl</span>(<span class="st">"Site olympique"</span>, site)) {</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    sites_olympiques <span class="ot">&lt;-</span> sites_olympiques <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">"Site paralympique"</span>, site)){</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    sites_paralympique <span class="ot">&lt;-</span> sites_paralympique <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Il y a au total"</span>, sites_olympiques, <span class="st">"sites olympiques et"</span>, sites_paralympique, <span class="st">"sites paralympiques."</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Il y a au total 26 sites olympiques et 19 sites paralympiques."</code></pre>
+</div>
+</div>
+</section>
+<section id="quels-sont-les-sites-qui-accueillent-plusieurs-disciplines-sportives" class="level2">
+<h2 class="anchored" data-anchor-id="quels-sont-les-sites-qui-accueillent-plusieurs-disciplines-sportives">5. Quels sont les sites qui accueillent plusieurs disciplines sportives ?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sites_multi_sport <span class="ot">&lt;-</span> data_ex[<span class="fu">sapply</span>(<span class="fu">strsplit</span>(data_ex<span class="sc">$</span>sports, <span class="st">","</span>), length) <span class="sc">&gt;</span><span class="dv">1</span>, ]</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Les sites accueillant plusieurs disciplines sportives sont :"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Les sites accueillant plusieurs disciplines sportives sont :"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(sites_multi_sport<span class="sc">$</span>nom)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Stade de France"                                
+ [2] "Vélodrome National de Saint-Quentin-en-Yvelines"
+ [3] "Stade Roland Garros"                            
+ [4] "Arena Paris Sud 4 (Porte de Versailles)"        
+ [5] "Pont d'Iéna"                                    
+ [6] "Arena Bercy"                                    
+ [7] "Arena Paris nord"                               
+ [8] "Arena Paris Sud 6 (Porte de Versailles)"        
+ [9] "Stade de la Concorde"                           
+[10] "Arena Champs de Mars"                           
+[11] "La Défense Arena"                               
+[12] "Stade nautique"                                 
+[13] "Arena Paris Sud 1 (Porte de Versailles)"        
+[14] "Stade Tour Eiffel"                              
+[15] "Arena La Chapelle"                              
+[16] "Centre aquatique"                               
+[17] "Château de Versailles"                          
+[18] "Grand Palais"                                   
+[19] "Invalides"                                      </code></pre>
+</div>
+</div>
+</section>
+<section id="quels-sont-les-disciplines-para-olympiques-accueillies-dans-ces-sites-franciliens" class="level2">
+<h2 class="anchored" data-anchor-id="quels-sont-les-disciplines-para-olympiques-accueillies-dans-ces-sites-franciliens">6. Quels sont les disciplines para-olympiques accueillies dans ces sites franciliens ?</h2>
+<p>(franciliens = De l’Île-de-France)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data_paralympique <span class="ot">&lt;-</span> data_ex[<span class="fu">grepl</span>(<span class="st">"Site paralympique"</span>, data_ex<span class="sc">$</span>sites_olympiques_paralympiques), ]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>disciplines_paralympiques <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">unlist</span>(<span class="fu">strsplit</span>(data_paralympique<span class="sc">$</span>sports, <span class="st">","</span>)))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Les disciplines para-olympiques accueillies sont:"</span>, <span class="fu">paste</span>(disciplines_paralympiques, <span class="at">collapse =</span> <span class="st">", "</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Les disciplines para-olympiques accueillies sont: Athlétisme, Para athlétisme, Rugby, Cyclisme sur piste, Para cyclisme sur piste, Tennis, Tennis fauteuil, Boxe, Para cyclisme sur route, Tennis de table, Para tennis de table, Basketball, Basket fauteuil, Gymnastique artistique, trampoline, Escrime, Pentathlon moderne, Volley-ball assis, Haltérophilie, Handball, Goalball, Judo, Para judo, Lutte, Rugby fauteuil, Natation, Para natation, Water-polo, Canoë, Para canoë, Aviron, Para aviron, Volleyball, Boccia, Volleyball de plage, Cécifoot, Badminton, Para Badminton, Gymnastique rythmique, Para powerlifting, Sports équestres, Para équitation, Escrime fauteuil, Taekwondo, Para taekwondo, Tir à l'arc, Para tir à l'arc, Cyclisme sur route"</code></pre>
+</div>
+</div>
+<p>Concernant le code :</p>
+<p>unlist(…) transforme cette liste en un vecteur unique, concaténant tous les éléments des différentes entrées en un seul vecteur long.</p>
+<p>unique(…) extrait les éléments uniques de ce vecteur, supprimant les répétitions.</p>
+</section>
+<section id="quels-sites-accueillent-le-plus-de-disciplines-différentes" class="level2">
+<h2 class="anchored" data-anchor-id="quels-sites-accueillent-le-plus-de-disciplines-différentes">7. Quel(s) site(s) accueille(nt) le plus de disciplines différentes ?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">strsplit</span>(data_ex<span class="sc">$</span>sports, <span class="st">","</span>), <span class="cf">function</span>(x) <span class="fu">length</span>(<span class="fu">unique</span>(x)) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1 3 1 2 3 1 2 1 2 4 4 3 4 1 4 3 4 2 2 1 4 1 3 0 3 0 1 1 4 4 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>nombre_de_disciplines <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">site =</span> data_ex<span class="sc">$</span>nom, </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">nombre_disciplines =</span> <span class="fu">sapply</span>(<span class="fu">strsplit</span>(data_ex<span class="sc">$</span>sports, <span class="st">","</span>), <span class="cf">function</span>(x) <span class="fu">length</span>(<span class="fu">unique</span>(x))))</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>sites_nombre_disciplines <span class="ot">&lt;-</span> nombre_de_disciplines[<span class="fu">order</span>                                            (<span class="sc">-</span>nombre_de_disciplines<span class="sc">$</span>nombre_disciplines),]</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>sites_4_disciplines <span class="ot">&lt;-</span> sites_nombre_disciplines[sites_nombre_disciplines<span class="sc">$</span>nombre_disciplines<span class="sc">&gt;</span><span class="dv">3</span>,]</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Les sites accueillant les plus de disciplines (4) sont :"</span>, <span class="fu">paste</span>(sites_4_disciplines<span class="sc">$</span>site, <span class="at">collapse =</span> <span class="st">","</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Les sites accueillant les plus de disciplines (4) sont : Arena Bercy,Arena Paris nord,Stade de la Concorde,Arena Champs de Mars,Stade nautique,Arena La Chapelle,Grand Palais,Invalides"</code></pre>
+</div>
+</div>
+</section>
+<section id="quel-discipline-aura-lieu-sur-le-plus-grand-nombre-de-sites-quels-sont-ces-sites" class="level2">
+<h2 class="anchored" data-anchor-id="quel-discipline-aura-lieu-sur-le-plus-grand-nombre-de-sites-quels-sont-ces-sites">8. Quel discipline aura lieu sur le plus grand nombre de sites ? Quels sont ces sites ?</h2>
+<hr>
+</section>
+</section>
+<section id="td-2" class="level1">
+<h1>TD 2</h1>
+<p>Exercice</p>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>Lancez la commande suivante :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>list_tables <span class="ot">&lt;-</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">session</span>(<span class="st">"https://fr.wikipedia.org/wiki/Liste_des_m%C3%A9daill%C3%A9s_olympiques"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">".wikitable"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>()</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>list_tables</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+# A tibble: 31 × 11
+   Discipline   Discipline   Années `Nombre de` `Nombre de` `médailles décernés`
+   &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;               
+ 1 "Discipline" Discipline   Années Éditions    Épreuves(e… Or                  
+ 2 ""           Athlétisme   Depui… 29          48          1028                
+ 3 ""           Aviron       Depui… 28          14          269                 
+ 4 ""           Badminton    Depui… 8           5           39                  
+ 5 ""           Basket-ball  Depui… 20          4           32                  
+ 6 ""           Boxe         1904,… 26          13          266                 
+ 7 ""           Canoë-kayak  Depui… 20          16          242                 
+ 8 ""           Cyclisme(ho… Depui… 29          22          263                 
+ 9 ""           Équitation   1900,… 26          6           151                 
+10 ""           Escrime      Depui… 29          12          223                 
+# ℹ 21 more rows
+# ℹ 5 more variables: `médailles décernés` &lt;chr&gt;, `médailles décernés` &lt;chr&gt;,
+#   `médailles décernés` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles (Or-Argent-Bronze)` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles d'or` &lt;chr&gt;
+
+[[2]]
+# A tibble: 16 × 11
+   Discipline   Discipline   Années `Nombre de` `Nombre de` `médailles décernés`
+   &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;               
+ 1 "Discipline" Discipline   Années Éditions    épreuves e… Or                  
+ 2 ""           Biathlon     1924,… 16          11          54                  
+ 3 ""           Bobsleigh    1924-… 21          3           39                  
+ 4 ""           Combiné nor… Depui… 22          3           28                  
+ 5 ""           Curling      1924,… 4           2           7                   
+ 6 ""           Hockey sur … Été&nbsp;:… 23          2           24                  
+ 7 ""           Luge         Depui… 14          4           37                  
+ 8 ""           Patinage ar… Été&nbsp;:… 24          4           77                  
+ 9 ""           Patinage de… Depui… 22          12          152                 
+10 ""           Patinage de… Depui… 7           8           32                  
+11 ""           Saut à ski   Depui… 22          4           38                  
+12 ""           Skeleton     1924,… 6           2           6                   
+13 ""           Ski acrobat… Depui… 7           10          18                  
+14 ""           Ski alpin    Depui… 19          10          132                 
+15 ""           Ski de fond  Depui… 22          12          134                 
+16 ""           Snowboard    Depui… 5           10          14                  
+# ℹ 5 more variables: `médailles décernés` &lt;chr&gt;, `médailles décernés` &lt;chr&gt;,
+#   `médailles décernés` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles (Or-Argent-Bronze)` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles d'or` &lt;chr&gt;
+
+[[3]]
+# A tibble: 14 × 8
+   Discipline   Discipline       Années `Nombre d'éditions` `Médailles décernés`
+   &lt;chr&gt;        &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;               &lt;chr&gt;               
+ 1 "Discipline" Discipline       Années Nombre d'éditions   Or                  
+ 2 ""           Baseball         1992–… 5                   5                   
+ 3 ""           Pelote basque    1900   1                   1                   
+ 4 ""           Cricket          1900   1                   1                   
+ 5 ""           Croquet          1900   1                   3                   
+ 6 ""           Jeu de paume     1908   1                   1                   
+ 7 ""           Crosse           1904–… 2                   2                   
+ 8 ""           Polo             1900,… 5                   5                   
+ 9 ""           Jeu de raquettes 1908   1                   2                   
+10 ""           Roque            1904   1                   1                   
+11 ""           Rugby à XV       1900,… 4                   4                   
+12 ""           Softball         1996–… 4                   4                   
+13 ""           Tir à la corde   1900–… 5                   5                   
+14 ""           Motonautisme     1908   5                   3                   
+# ℹ 3 more variables: `Médailles décernés` &lt;chr&gt;, `Médailles décernés` &lt;chr&gt;,
+#   `Médailles décernés` &lt;chr&gt;
+
+[[4]]
+# A tibble: 2 × 8
+  Discipline   Discipline        Années `Nombre d'éditions` `Médailles décernés`
+  &lt;chr&gt;        &lt;chr&gt;             &lt;chr&gt;  &lt;chr&gt;               &lt;chr&gt;               
+1 "Discipline" Discipline        Années Nombre d'éditions   Or                  
+2 ""           Patrouille milit… 1924   1                   1                   
+# ℹ 3 more variables: `Médailles décernés` &lt;chr&gt;, `Médailles décernés` &lt;chr&gt;,
+#   `Médailles décernés` &lt;chr&gt;
+
+[[5]]
+# A tibble: 30 × 11
+   Jeux  Médaille  Médaille Hôte     Nombred'épreuves(ave…¹ `Médailles décernés`
+   &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt;               
+ 1 Jeux  Médaille  Médaille Hôte     Nombred'épreuves(avec… Or                  
+ 2 1896  médaillés tableau  Athènes… 43                     43                  
+ 3 1900  médaillés tableau  Paris, … 95                     90                  
+ 4 1904  médaillés tableau  Saint-L… 91                     96                  
+ 5 1908  médaillés tableau  Londres… 110                    110                 
+ 6 1912  médaillés tableau  Stockho… 102                    103                 
+ 7 1920  médaillés tableau  Anvers,… 154                    156                 
+ 8 1924  médaillés tableau  Paris, … 126                    126                 
+ 9 1928  médaillés tableau  Amsterd… 109                    111                 
+10 1932  médaillés tableau  Los Ang… 117                    116                 
+# ℹ 20 more rows
+# ℹ abbreviated name: ¹​`Nombred'épreuves(avec médailles)`
+# ℹ 5 more variables: `Médailles décernés` &lt;chr&gt;, `Médailles décernés` &lt;chr&gt;,
+#   `Médailles décernés` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles (Or-Argent-Bronze)` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles d'or` &lt;chr&gt;
+
+[[6]]
+# A tibble: 24 × 11
+   Jeux  Médaille  Médaille Hôte     Nombred'épreuves(ave…¹ `Médailles décernés`
+   &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;                  &lt;chr&gt;               
+ 1 Jeux  Médaille  Médaille Hôte     Nombred'épreuves(avec… Or                  
+ 2 1924  médaillés tableau  Chamoni… 16                     16                  
+ 3 1928  médaillés tableau  Saint-M… 14                     14                  
+ 4 1932  médaillés tableau  Lake Pl… 14                     14                  
+ 5 1936  médaillés tableau  Garmisc… 17                     17                  
+ 6 1948  médaillés tableau  Saint-M… 22                     22                  
+ 7 1952  médaillés tableau  Oslo, N… 22                     22                  
+ 8 1956  médaillés tableau  Cortina… 24                     25                  
+ 9 1960  médaillés tableau  Squaw V… 27                     28                  
+10 1964  médaillés tableau  Innsbru… 34                     34                  
+# ℹ 14 more rows
+# ℹ abbreviated name: ¹​`Nombred'épreuves(avec médailles)`
+# ℹ 5 more variables: `Médailles décernés` &lt;chr&gt;, `Médailles décernés` &lt;chr&gt;,
+#   `Médailles décernés` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles (Or-Argent-Bronze)` &lt;chr&gt;,
+#   `Athlète(s) avec le plus de médailles d'or` &lt;chr&gt;</code></pre>
+</div>
+</div>
+<p>Que s’est-il passé ? Que contient l’objet list_tables ?</p>
+<p>Recupere l’info de wikipedia et contient une liste de tibbles, chacun représentant un tableau contenant les informations sur les médaillés olympiques.</p>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Première table.</p>
+<p>Créez un objet intitulé data_medailles_sport_ete contenant le premier élément de list_tables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>data_medailles_sport_ete <span class="ot">&lt;-</span>  list_tables[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>La table n’est pas bien formattée.</p>
+<p>Je supprime la première colonne, la première ligne et je modifie les noms de colonnes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>data_medailles_sport_ete <span class="ot">&lt;-</span> data_medailles_sport_ete[<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data_medailles_sport_ete) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Discipline"</span>, <span class="st">"Annees"</span>, <span class="st">"Editions"</span>, <span class="st">"Epreuves_2020"</span>, <span class="st">"Or"</span>, <span class="st">"Argent"</span>, <span class="st">"Bronze"</span>, <span class="st">"Total"</span>, <span class="st">"Athletes_medailles"</span>, <span class="st">"Athletes_or"</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data_medailles_sport_ete)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [30 × 10] (S3: tbl_df/tbl/data.frame)
+ $ Discipline        : chr [1:30] "Athlétisme" "Aviron" "Badminton" "Basket-ball" ...
+ $ Annees            : chr [1:30] "Depuis 1896" "Depuis 1900" "Depuis 1992" "Depuis 1936" ...
+ $ Editions          : chr [1:30] "29" "28" "8" "20" ...
+ $ Epreuves_2020     : chr [1:30] "48" "14" "5" "4" ...
+ $ Or                : chr [1:30] "1028" "269" "39" "32" ...
+ $ Argent            : chr [1:30] "1030" "268" "39" "32" ...
+ $ Bronze            : chr [1:30] "1027" "273" "43" "32" ...
+ $ Total             : chr [1:30] "3085" "810" "121" "96" ...
+ $ Athletes_medailles: chr [1:30] "Paavo Nurmi (FIN) (9-3-0)" "Elisabeta Lipă (ROU) (5-2-1)" "Gao Ling (CHN) (2-1-1)" "Teresa Edwards (USA) (4-0-1)" ...
+ $ Athletes_or       : chr [1:30] "Paavo Nurmi (FIN) (9-3-0) Carl Lewis (USA) (9-1-0)" "Elisabeta Lipă (ROU) (5-2-1) Georgeta Damian (ROU) (5-0-1) Steven Redgrave (GBR) (5-0-1)" "Gao Ling (CHN) (2-1-1) Kim Dong-moon (KOR) (2-0-1) Zhang Nan (CHN) (2-0-1) Ge Fei (CHN) (2-0-0) Gu Jun (CHN) (2"| __truncated__ "Teresa Edwards (USA) (4-0-1) Sue Bird (USA) (4-0-0) Tamika Catchings (USA) (4-0-0) Lisa Leslie (USA) (4-0-0) Di"| __truncated__ ...</code></pre>
+</div>
+</div>
+<p>Les colonnes Editions, Epreuves_2020, Or, Argent, Bronze, Total seront converties en colonnes d’entiers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>data_medailles_sport_ete[<span class="fu">c</span>(<span class="st">"Editions"</span>, <span class="st">"Epreuves_2020"</span>, <span class="st">"Or"</span>, <span class="st">"Argent"</span>, <span class="st">"Bronze"</span>, <span class="st">"Total"</span>)] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(data_medailles_sport_ete[<span class="fu">c</span>(<span class="st">"Editions"</span>, <span class="st">"Epreuves_2020"</span>, <span class="st">"Or"</span>, <span class="st">"Argent"</span>, <span class="st">"Bronze"</span>, <span class="st">"Total"</span>)], as.integer)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data_medailles_sport_ete)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [30 × 10] (S3: tbl_df/tbl/data.frame)
+ $ Discipline        : chr [1:30] "Athlétisme" "Aviron" "Badminton" "Basket-ball" ...
+ $ Annees            : chr [1:30] "Depuis 1896" "Depuis 1900" "Depuis 1992" "Depuis 1936" ...
+ $ Editions          : int [1:30] 29 28 8 20 26 20 29 26 29 27 ...
+ $ Epreuves_2020     : int [1:30] 48 14 5 4 13 16 22 6 12 2 ...
+ $ Or                : int [1:30] 1028 269 39 32 266 242 263 151 223 34 ...
+ $ Argent            : int [1:30] 1030 268 39 32 266 241 261 149 223 34 ...
+ $ Bronze            : int [1:30] 1027 273 43 32 472 243 260 148 221 35 ...
+ $ Total             : int [1:30] 3085 810 121 96 1004 726 784 448 667 103 ...
+ $ Athletes_medailles: chr [1:30] "Paavo Nurmi (FIN) (9-3-0)" "Elisabeta Lipă (ROU) (5-2-1)" "Gao Ling (CHN) (2-1-1)" "Teresa Edwards (USA) (4-0-1)" ...
+ $ Athletes_or       : chr [1:30] "Paavo Nurmi (FIN) (9-3-0) Carl Lewis (USA) (9-1-0)" "Elisabeta Lipă (ROU) (5-2-1) Georgeta Damian (ROU) (5-0-1) Steven Redgrave (GBR) (5-0-1)" "Gao Ling (CHN) (2-1-1) Kim Dong-moon (KOR) (2-0-1) Zhang Nan (CHN) (2-0-1) Ge Fei (CHN) (2-0-0) Gu Jun (CHN) (2"| __truncated__ "Teresa Edwards (USA) (4-0-1) Sue Bird (USA) (4-0-0) Tamika Catchings (USA) (4-0-0) Lisa Leslie (USA) (4-0-0) Di"| __truncated__ ...</code></pre>
+</div>
+</div>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>Quelles sont les 3 disciplines avec le plus de médailles distribuées depuis le début de l’histoire des jeux olympiques ?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>top3_disciplines <span class="ot">&lt;-</span> data_medailles_sport_ete[<span class="fu">order</span>(data_medailles_sport_ete<span class="sc">$</span>Total, <span class="at">decreasing =</span> <span class="cn">TRUE</span>), ][<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,]</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Les 3 disciplines avec le plus de médailles sont :"</span>, <span class="fu">paste</span>(top3_disciplines<span class="sc">$</span>Discipline, <span class="at">collapse =</span> <span class="st">", "</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Les 3 disciplines avec le plus de médailles sont : Athlétisme, Natation(hommes, femmes), Lutte </code></pre>
+</div>
+</div>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<p>Quelles sont les disciplines avec le moins d’épreuves en 2020 ?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>disc_moins_epreuves_2020 <span class="ot">&lt;-</span> data_medailles_sport_ete[(data_medailles_sport_ete<span class="sc">$</span>Epreuves_2020 <span class="sc">==</span> (<span class="fu">min</span>(data_medailles_sport_ete<span class="sc">$</span>Epreuves_2020))),] </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># utilisation du min et == pour trouver les epreuves avec le moins d'épreuves</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Les disciplines avec le moins d'éprevues en 2020 sont:"</span>, <span class="fu">paste</span>(disc_moins_epreuves_2020<span class="sc">$</span>Discipline, <span class="at">collapse =</span> <span class="st">","</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Les disciplines avec le moins d'éprevues en 2020 sont: Football,Golf,Handball,Hockey sur gazon,Natation synchronisée,Pentathlon moderne,Volley-ball,Water polo</code></pre>
+</div>
+</div>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>La colonne Editions nous renseigne sur le nombre total d’apparence des disciplines aux JO d’été. Nous souhaitons vérifier ce calcul en implémentant notre propre fonction calcul_nb_editions_int. Dans un premier temps, la fonction calcul_nb_editions prendra en entrée un paramètre depuis, de type entier, qui représente depuis quelle année la discipline est au programme.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Premier partie, fonction calcul de nombre d'editions </span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>calcul_nb_editions <span class="ot">&lt;-</span> <span class="cf">function</span>(depuis){</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calcul de l'année en cours pour connaitre le nombre d'année au total</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  annee_actuelle <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">format</span>(<span class="fu">Sys.Date</span>(), <span class="st">"%Y"</span>))</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  annees_editions <span class="ot">&lt;-</span> <span class="fu">seq</span>(depuis, annee_actuelle, <span class="dv">4</span>)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>  nb_edtions <span class="ot">&lt;-</span> <span class="fu">length</span>(annees_editions)</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(nb_edtions)</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="fu">calcul_nb_editions</span>(<span class="dv">1896</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 33</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sys.Date() est une fonction en R qui retourne la date courante.</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Formate cette date pour extraire l'année en cours sous forme de chaîne de caractères avec format(…, "%Y") et as.integer convertit cette chaîne en un entier avec as.integer()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>La deuxieme partie, consiste à verifier la colonne Editions, à l’aide d’une fonction appelée &lt;calcul_nb_editions_int&gt; .</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data_medailles_sport_ete<span class="sc">$</span>Annees)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> chr [1:30] "Depuis 1896" "Depuis 1900" "Depuis 1992" "Depuis 1936" ...</code></pre>
+</div>
+</div>
+<p>Pour vérifier la colonne Éditions, il est nécessaire de récupérer les informations relatives aux années de participation aux Jeux Olympiques, que ce soit par année individuelle, par plage d’années, ou en continu depuis une année donnée. La colonne des années est définie comme une chaîne de caractères; Il faut donc créer une fonction qui extraira toutes les années et les comptabilisera.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>calcul_nb_editions_str <span class="ot">&lt;-</span> <span class="cf">function</span>(annee_texte){</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  annee_actuelle <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">format</span>(<span class="fu">Sys.Date</span>(), <span class="st">"%Y"</span>))</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  annees <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">str_extract_all</span>(annee_texte, <span class="st">"</span><span class="sc">\\</span><span class="st">b</span><span class="sc">\\</span><span class="st">d{4}</span><span class="sc">\\</span><span class="st">b"</span>)) <span class="co"># Extraire toutes les années individuelles</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>   depuis_annees <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">unlist</span>(<span class="fu">str_extract_all</span>(annee_texte, <span class="fu">regex</span>(<span class="st">"(?&lt;=depuis )</span><span class="sc">\\</span><span class="st">d{4}"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))) <span class="co"># Extraire les années de départ pour "depuis / Depuis "</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Traiter les plages d'années</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  plages <span class="ot">&lt;-</span> <span class="fu">str_extract_all</span>(annee_texte, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}–</span><span class="sc">\\</span><span class="st">d{4}"</span>) <span class="co"># Extraire les plages d'années</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  plages <span class="ot">&lt;-</span> <span class="fu">unlist</span>(plages)</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (plage <span class="cf">in</span> plages) {</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>    annees_debut_fin <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">unlist</span>(<span class="fu">str_extract_all</span>(plage, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}"</span>)))</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>    annees <span class="ot">&lt;-</span> <span class="fu">c</span>(annees, <span class="fu">seq</span>(annees_debut_fin[<span class="dv">1</span>], annees_debut_fin[<span class="dv">2</span>], <span class="at">by =</span> <span class="dv">4</span>))</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ajouter les éditions depuis les années spécifiques jusqu'à l'année actuelle</span></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (depuis_annee <span class="cf">in</span> depuis_annees) {</span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>    annees_depuis <span class="ot">&lt;-</span> <span class="fu">seq</span>(depuis_annee, annee_actuelle, <span class="at">by =</span> <span class="dv">4</span>)</span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>    annees <span class="ot">&lt;-</span> <span class="fu">c</span>(annees, annees_depuis)</span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Calculer le nombre d'éditions uniques</span></span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>  nb_editions <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(<span class="fu">as.integer</span>(annees)))</span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(nb_editions)</span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a>comparatif <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">Edtions =</span> data_medailles_sport_ete<span class="sc">$</span>Editions, </span>
+<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">Editions_a_2024 =</span> <span class="fu">sapply</span>(data_medailles_sport_ete<span class="sc">$</span>Annees, calcul_nb_editions_str))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+regex(…, ignore_case = TRUE)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Est utilisé pour créer une expression régulière avec l’option ignore_case = TRUE, rendant la recherche insensible à la casse.</p>
+</div>
+</div>
+</section>
+<section id="question-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
+<p>Dans certains cas, les disciplines ont été au programme de façon discontinue. Proposez une nouvelle fonction calcul_nb_editions_str qui prendra cette fois-ci en entrée des chaînes de caractères. Par exemple, l’appel suivant: calcul_nb_editions_str(“1896, 1904, depuis 1920”)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La fonction <code>calcul_nb_editions_str</code> a déjà était conçue pour extraire des années individuelles, traiter des plages d’années, et compter les éditions depuis une certaine année jusqu’à l’année actuelle dans la question 6.</p>
+</div>
+</div>
+<p>Cepandant si les années sont presentés comme une liste ou un vecteur (incluant des valeurs individuelles ), il faut une function tel que :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>calcul_nb_editions.integer <span class="ot">&lt;-</span> <span class="cf">function</span>(annees_participation) {</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  nb_participations <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(annees_participation))</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(nb_participations)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="fu">calcul_nb_editions.integer</span>(<span class="dv">1900</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+</section>
+<section id="question-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
+<p>Définissez une fonction générique calcul_nb_editions et deux implémentations calcul_nb_editions.integer et ’calcul_nb_editions.character. Quels résultats donnent les appels : calcul_nb_editions(2000) calcul_nb_editions(“1904–1924, depuis 1948”)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition de la fonction génerique</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>calcul_nb_editions <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">UseMethod</span>(<span class="st">"calcul_nb_editions"</span>)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Pour les Entiers</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>calcul_nb_editions.integer <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  nb_participations <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(x))</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(nb_participations)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Pour les Chaînes de Caractères</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>calcul_nb_editions.character <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  annee_actuelle <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">format</span>(<span class="fu">Sys.Date</span>(), <span class="st">"%Y"</span>))</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  annees <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">str_extract_all</span>(x, <span class="st">"</span><span class="sc">\\</span><span class="st">b</span><span class="sc">\\</span><span class="st">d{4}</span><span class="sc">\\</span><span class="st">b"</span>)) <span class="co"># Extraire toutes les années individuelles</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  depuis_annees <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">unlist</span>(<span class="fu">str_extract_all</span>(x, <span class="fu">regex</span>(<span class="st">"(?&lt;=depuis )</span><span class="sc">\\</span><span class="st">d{4}"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))) <span class="co"># Extraire les années de départ pour "depuis / Depuis"</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Traiter les plages d'années</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>  plages <span class="ot">&lt;-</span> <span class="fu">str_extract_all</span>(x, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}–</span><span class="sc">\\</span><span class="st">d{4}"</span>) <span class="co"># Extraire les plages d'années</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  plages <span class="ot">&lt;-</span> <span class="fu">unlist</span>(plages)</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (plage <span class="cf">in</span> plages) {</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>    annees_debut_fin <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">unlist</span>(<span class="fu">str_extract_all</span>(plage, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}"</span>)))</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>    annees <span class="ot">&lt;-</span> <span class="fu">c</span>(annees, <span class="fu">seq</span>(annees_debut_fin[<span class="dv">1</span>], annees_debut_fin[<span class="dv">2</span>], <span class="at">by =</span> <span class="dv">4</span>))</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Ajouter les éditions depuis les années spécifiques jusqu'à l'année actuelle</span></span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (depuis_annee <span class="cf">in</span> depuis_annees) {</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>    annees_depuis <span class="ot">&lt;-</span> <span class="fu">seq</span>(depuis_annee, annee_actuelle, <span class="at">by =</span> <span class="dv">4</span>)</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>    annees <span class="ot">&lt;-</span> <span class="fu">c</span>(annees, annees_depuis)</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Calculer le nombre d'éditions uniques</span></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a>  nb_editions <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">unique</span>(<span class="fu">as.integer</span>(annees)))</span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(nb_editions)</span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calcul_nb_editions</span>(<span class="dv">2000</span>)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">calcul_nb_editions</span>(<span class="st">"1904–1924, depuis 1948"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Error in <code>UseMethod()</code>: ! no applicable method for ‘calcul_nb_editions’ applied to an object of class “c(‘double’, ‘numeric’)” Backtrace: 1. global calcul_nb_editions(2000)</p>
+<p>R traite les nombres sans décimales non explicitement définis comme entiers (integer) en tant que nombres à virgule flottante (double), même s’ils sont sans partie décimale.</p>
+<p>Il faut donc définir une méthode calcul_nb_editions.double qui traite ou redirige simplement vers calcul_nb_editions.integer, en tenant compte que les nombres seront traités comme des double par défaut :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>calcul_nb_editions.double <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Appeler directement calcul_nb_editions.integer </span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">calcul_nb_editions.integer</span>(<span class="fu">as.integer</span>(x))}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calcul_nb_editions</span>(<span class="dv">2000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calcul_nb_editions</span>(<span class="st">"1904–1924, depuis 1948"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 26</code></pre>
+</div>
+</div>
+</section>
+<section id="question-8" class="level2">
+<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
+<p>En Athlétisme, le Finlandais Paavo Nurmi détient le record de médailles avec 12 médailles obtenues lors des JO d’hiver.</p>
+<p>Implémentez une fonction &lt; calcul_medailles_individuelles&gt; qui détermine le nombre de médaille maximal a été obtenu par un athlète lors d’olympiades. Note : s’il y a plusieurs athlètes à égalité, alors la cellule comporte plusieurs éléments, et une manipulation de la chaîne de caractères est nécessaire.</p>
+<ul>
+<li>Les jeux olympiques d’hiver se trouvent dans la list_tables, 2eme</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>data_medailles_sport_hiver <span class="ot">&lt;-</span> list_tables[[<span class="dv">2</span>]]</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>data_medailles_sport_hiver <span class="ot">&lt;-</span> data_medailles_sport_hiver[<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>data_medailles_sport_hiver<span class="sc">$</span>Discipline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Biathlon"                            
+ [2] "Bobsleigh"                           
+ [3] "Combiné nordique"                    
+ [4] "Curling"                             
+ [5] "Hockey sur glace"                    
+ [6] "Luge"                                
+ [7] "Patinage artistique"                 
+ [8] "Patinage de vitesse"                 
+ [9] "Patinage de vitesse sur piste courte"
+[10] "Saut à ski"                          
+[11] "Skeleton"                            
+[12] "Ski acrobatique"                     
+[13] "Ski alpin"                           
+[14] "Ski de fond"                         
+[15] "Snowboard"                           </code></pre>
+</div>
+</div>
+<p>La discipline Athétisme fait partie des jeux olympiques d’été et non d’hiver, alors je retourne au df été</p>
+<p>La colonne N° 9 designe les <strong>Athlète(s) avec le plus de médailles (Or-Argent-Bronze)</strong></p>
+</section>
+</section>
+<section id="terminer-plus-tard" class="level1">
+<h1>TERMINER PLUS TARD</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>calcul_medailles_individuelles <span class="ot">&lt;-</span> <span class="cf">function</span>(athletes_medailles) {</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>   <span class="co"># Étape 1: Extraire les nombres de médailles pour chaque athlète</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  patterns_medailles <span class="ot">&lt;-</span> <span class="fu">str_extract_all</span>(athletes_medailles, <span class="st">"</span><span class="sc">\\</span><span class="st">((</span><span class="sc">\\</span><span class="st">d+)-(</span><span class="sc">\\</span><span class="st">d+)-(</span><span class="sc">\\</span><span class="st">d+)</span><span class="sc">\\</span><span class="st">)"</span>)</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>  medailles_liste <span class="ot">&lt;-</span> <span class="fu">lapply</span>(patterns_medailles[[<span class="dv">1</span>]], <span class="cf">function</span>(x) {</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>    nums <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">unlist</span>(<span class="fu">str_split</span>(x, <span class="st">"-"</span>)))</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sum</span>(nums)</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Étape 2: Calculer le total de médailles pour chaque athlète</span></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>  total_medailles <span class="ot">&lt;-</span> <span class="fu">unlist</span>(medailles_liste)</span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Étape 3: Déterminer le maximum de médailles</span></span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a>  max_medailles <span class="ot">&lt;-</span> <span class="fu">max</span>(total_medailles)</span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identifier les athlètes ayant le nombre maximal de médailles</span></span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>  indices_max <span class="ot">&lt;-</span> <span class="fu">which</span>(total_medailles <span class="sc">==</span> max_medailles)</span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Extraire les noms des athlètes ayant le nombre maximal de médailles</span></span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a>  noms_athletes_max <span class="ot">&lt;-</span> <span class="fu">str_extract_all</span>(athletes_medailles, <span class="st">"[^</span><span class="sc">\\</span><span class="st">(]+"</span>)[[<span class="dv">1</span>]][indices_max]</span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a>  noms_athletes_max <span class="ot">&lt;-</span> <span class="fu">str_trim</span>(noms_athletes_max) <span class="co"># Nettoyer les espaces</span></span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(noms_athletes_max)</span>
+<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="td-3" class="level1">
+<h1>TD 3</h1>
+<p>Pour ce td l’installation de plusieurs librairies a été necessaire, “stringr”, “lubridate”, “arrow”, “dplyr”, “tidyr”, “jsonlite”, “RSQLite”.</p>
+<p>Les données associés au TP3 sont décompressés dans un dossier appelé &lt;data&gt;</p>
+<section id="question-1-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-1">Question 1</h2>
+<p>Listez les fichiers présents dans le dossier data. Quelles sont les extensions des différents fichiers ?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="at">path =</span> <span class="st">"data/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "data.sqlite"                                                 
+[2] "olympics_athletes.json"                                      
+[3] "paris-2024-sites-olympiques-et-paralympiques-franciliens.csv"
+[4] "tokyo_athletes.parquet"                                      </code></pre>
+</div>
+</div>
+<p>Les extensions des différents fichiers dans le dossier data sont : sqlite, json et parquet</p>
+</section>
+<section id="question-2-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-1">Question 2</h2>
+<p>Lisez le fichier .parquet en utilisant la librairie arrow. Quelles sont les dimensions de la table ? Quelles sont les colonnes présentes ?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>tokyo_athletes <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="at">file =</span> <span class="st">"data/tokyo_athletes.parquet"</span>)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(tokyo_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11085     3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(tokyo_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Name"       "NOC"        "Discipline"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(tokyo_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [11,085 × 3] (S3: tbl_df/tbl/data.frame)
+ $ Name      : chr [1:11085] "AALERUD Katrine" "ABAD Nestor" "ABAGNALE Giovanni" "ABALDE Alberto" ...
+ $ NOC       : chr [1:11085] "Norway" "Spain" "Italy" "Spain" ...
+ $ Discipline: chr [1:11085] "Cycling Road" "Artistic Gymnastics" "Rowing" "Basketball" ...</code></pre>
+</div>
+</div>
+<p>Le fichier &lt; tokyo_athletes.parquet &gt; a 3 variables de type chr : “Name” “NOC” “Discipline” et 11085 observations</p>
+</section>
+<section id="question-3-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-1">Question 3</h2>
+<p>Lisez le fichier .json en utilisant la librairie jsonlite. Quelles sont les dimensions de la table ? Quelles sont les colonnes présentes ?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>olympics_athletes <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(<span class="st">"data/olympics_athletes.json"</span> )</span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(olympics_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 269731     13</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(olympics_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "ID"     "Name"   "Sex"    "Age"    "Height" "Weight" "Team"   "NOC"   
+ [9] "Games"  "City"   "Sport"  "Event"  "Medal" </code></pre>
+</div>
+</div>
+<p>Le fichier &lt; olympics_athletes.json &gt; a 13 variables et 269731 observations.</p>
+<p>Les colonnes sont : “ID” “Name” “Sex” “Age” “Height” “Weight” “Team” “NOC” “Games” “City” “Sport” “Event” “Medal”</p>
+</section>
+<section id="question-4-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-4-1">Question 4</h2>
+<p>Importez la librairie RSQLite, et ouvrez une connexion à la base de données sqlite en utilisant la fonction dbConnect. Le driver à utiliser sera SQLite(). Quelles sont les tables présentes dans la table ? Vous pourrez utiliser la fonction dbListTables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="at">dbname =</span> <span class="st">"data/data.sqlite"</span>)</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>tables <span class="ot">&lt;-</span> <span class="fu">dbListTables</span>(con)</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(tables)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "olympics_athletes" "tokyo_athletes"    "tokyo_medals"     
+[4] "tokyo_teams"      </code></pre>
+</div>
+</div>
+<p>Les tables presentes dans la table sont : “tokyo_medals” “tokyo_teams”</p>
+</section>
+<section id="question-5-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-5-1">Question 5</h2>
+<p>Créez deux nouvelles tables dans la base de données à l’aide de la fonction dbWriteTable. Les tables s’appeleront respectivement olympics_athletes et tokyo_athletes pour les fichiers olympics_athletes.json et tokyo_athletes.parquet.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"olympics_athletes"</span>, olympics_athletes,  <span class="at">overwrite =</span> <span class="cn">TRUE</span> ) </span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"tokyo_athletes"</span>,tokyo_athletes,  <span class="at">overwrite =</span> <span class="cn">TRUE</span> )</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dbListTables</span>(con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "olympics_athletes" "tokyo_athletes"    "tokyo_medals"     
+[4] "tokyo_teams"      </code></pre>
+</div>
+</div>
+</section>
+<section id="question-6-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-6-1">Question 6</h2>
+<p>Inspectez la table olympics_athletes en utilisant la fonction dbListFields. Quelles sont les colonnes de la table ?</p>
+<p>Les colonnes sont :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbListFields</span>(con, <span class="st">"olympics_athletes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "ID"     "Name"   "Sex"    "Age"    "Height" "Weight" "Team"   "NOC"   
+ [9] "Games"  "City"   "Sport"  "Event"  "Medal" </code></pre>
+</div>
+</div>
+</section>
+<section id="question-7-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-7-1">Question 7</h2>
+<p>Importez cette table depuis la base de données en utilisant la fonction dbReadTable. Convertissez la table en tibble en utilisant la fonction as_tibble.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>olympics_athletes <span class="ot">&lt;-</span> <span class="fu">dbReadTable</span>(con, <span class="st">"olympics_athletes"</span>) </span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  olympics_athletes <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(olympics_athletes)</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(olympics_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "tbl_df"     "tbl"        "data.frame"</code></pre>
+</div>
+</div>
+</section>
+<section id="question-8-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-8-1">Question 8</h2>
+<p>Convertissez la colonne Sex en variable catégorielle avec la fonction mutate.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>olympics_athletes <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Sex =</span> <span class="fu">as.factor</span>(Sex))</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(olympics_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [269,731 × 13] (S3: tbl_df/tbl/data.frame)
+ $ ID    : int [1:269731] 1 2 3 4 5 5 5 5 5 5 ...
+ $ Name  : chr [1:269731] "A Dijiang" "A Lamusi" "Gunnar Nielsen Aaby" "Edgar Lindenau Aabye" ...
+ $ Sex   : Factor w/ 2 levels "F","M": 2 2 2 2 1 1 1 1 1 1 ...
+ $ Age   : int [1:269731] 24 23 24 34 21 21 25 25 27 27 ...
+ $ Height: int [1:269731] 180 170 NA NA 185 185 185 185 185 185 ...
+ $ Weight: num [1:269731] 80 60 NA NA 82 82 82 82 82 82 ...
+ $ Team  : chr [1:269731] "China" "China" "Denmark" "Denmark/Sweden" ...
+ $ NOC   : chr [1:269731] "CHN" "CHN" "DEN" "DEN" ...
+ $ Games : chr [1:269731] "1992 Summer" "2012 Summer" "1920 Summer" "1900 Summer" ...
+ $ City  : chr [1:269731] "Barcelona" "London" "Antwerpen" "Paris" ...
+ $ Sport : chr [1:269731] "Basketball" "Judo" "Football" "Tug-Of-War" ...
+ $ Event : chr [1:269731] "Basketball Men's Basketball" "Judo Men's Extra-Lightweight" "Football Men's Football" "Tug-Of-War Men's Tug-Of-War" ...
+ $ Medal : chr [1:269731] NA NA NA "Gold" ...</code></pre>
+</div>
+</div>
+</section>
+<section id="question-9" class="level2">
+<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
+<p>Créez deux colonnes à partir de la colonne Games. La première colonne Year sera une colonne de type integer contenant l’année des jeux. La deuxième colonne isSummer sera une colonne booléenne qui indiquera si les jeux sont des jeux d’été ou d’hiver. Vous pourrez utiliser la fonction separate_wider_delim de tidyr notamment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>olympics_athletes <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Games, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Year"</span>, <span class="st">"isSummer"</span>), <span class="at">sep =</span> <span class="st">" "</span>) <span class="sc">|&gt;</span></span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Year =</span> <span class="fu">as.integer</span>(Year),</span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">isSummer =</span> isSummer <span class="sc">==</span> <span class="st">"Summer"</span></span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="question-10" class="level2">
+<h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
+<p>10. Calculez la moyenne d’age des athletes pour chacune des éditions des JO d’été. Quelle édition a compté les athlètes les plus jeunes ? Les plus vieux ?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>resultat <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(isSummer<span class="sc">==</span><span class="cn">TRUE</span>)<span class="sc">|&gt;</span></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(Year)<span class="sc">|&gt;</span></span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">summarise</span>(<span class="at">age_moyenne =</span> <span class="fu">mean</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">plus_jeunes =</span> age_moyenne<span class="sc">==</span> <span class="fu">min</span>(age_moyenne),</span>
+<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">plus_vieux =</span> age_moyenne <span class="sc">==</span> <span class="fu">max</span>(age_moyenne)</span>
+<span id="cb80-8"><a href="#cb80-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb80-9"><a href="#cb80-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(plus_jeunes <span class="sc">|</span> plus_vieux)</span>
+<span id="cb80-10"><a href="#cb80-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb80-11"><a href="#cb80-11" aria-hidden="true" tabindex="-1"></a>resultat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+   Year age_moyenne plus_jeunes plus_vieux
+  &lt;int&gt;       &lt;dbl&gt; &lt;lgl&gt;       &lt;lgl&gt;     
+1  1896        23.6 TRUE        FALSE     
+2  1932        30.2 FALSE       TRUE      </code></pre>
+</div>
+</div>
+</section>
+<section id="question-11" class="level2">
+<h2 class="anchored" data-anchor-id="question-11">Question 11</h2>
+<p>Quelle est la discipline des JO d’été dont la taille des athlètes féminines est la plus grande ? Quelle a été cette discipline au cours de chacune des éditions ? Calculez le nombre de fois où chaque discipline a été la discipline avec les plus grandes athlètes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>femmes_taille_sport <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Sex <span class="sc">==</span> <span class="st">"F"</span>, isSummer <span class="sc">==</span> <span class="cn">TRUE</span>)<span class="sc">|&gt;</span></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport) <span class="sc">|&gt;</span></span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">taille_moyenne =</span> <span class="fu">mean</span>(Height, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(taille_moyenne))<span class="sc">|&gt;</span></span>
+<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span>
+<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb82-8"><a href="#cb82-8" aria-hidden="true" tabindex="-1"></a>femmes_taille_sport</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  Sport      taille_moyenne
+  &lt;chr&gt;               &lt;dbl&gt;
+1 Basketball           182.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>discipline_plus_grandes_par_edition <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Sex <span class="sc">==</span> <span class="st">"F"</span>, isSummer <span class="sc">==</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year, Sport) <span class="sc">|&gt;</span></span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">taille_moyenne =</span> <span class="fu">mean</span>(Height, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filtrer les lignes où la taille moyenne n'est pas NaN</span></span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(taille_moyenne)) <span class="sc">|&gt;</span></span>
+<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">|&gt;</span></span>
+<span id="cb84-8"><a href="#cb84-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">order_by =</span> taille_moyenne, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
+<span id="cb84-9"><a href="#cb84-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb84-10"><a href="#cb84-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-11"><a href="#cb84-11" aria-hidden="true" tabindex="-1"></a>discipline_plus_grandes_par_edition</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 23 × 3
+    Year Sport         taille_moyenne
+   &lt;int&gt; &lt;chr&gt;                  &lt;dbl&gt;
+ 1  1920 Swimming                166.
+ 2  1924 Fencing                 168.
+ 3  1928 Fencing                 172.
+ 4  1932 Fencing                 173.
+ 5  1936 Fencing                 178 
+ 6  1948 Swimming                172.
+ 7  1952 Athletics               168.
+ 8  1956 Equestrianism           170.
+ 9  1960 Athletics               169.
+10  1964 Volleyball              171.
+# ℹ 13 more rows</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="section" class="level1">
+<h1>———————————–</h1>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,25 @@
+name: Publish Quarto Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - site
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup Quarto
+        uses: quarto-actions/setup-quarto@v1
+        
+      - name: Render Site with Quarto
+        run: quarto render --to html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+

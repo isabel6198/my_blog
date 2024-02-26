@@ -3,8 +3,8 @@ title: "Post With Code"
 author: "Isabel"
 format: html
 date: "2024-02-25"
-categories: [Librairie olympicsWeather, Tests, analysis]
 image: "image.jpg"
+categories: [Package olympicsWeather]
 ---
 
 ## Librairie olympicsWeather
@@ -32,7 +32,9 @@ remotes::install_github("isabel6198/olympicsWeather")
 
 ```
 
-## Prévisions météo à 7 jours pour le stade de France
+## Prévisions
+
+### Prévisions météo à 7 jours pour le stade de France
 
 ```{r}
 #| warning: false
@@ -49,7 +51,7 @@ graphique
 
 ```
 
-## Prévisions météo pour les coordonnées GPS
+### Prévisions météo pour les coordonnées GPS
 
 ```{r}
 #| warning: false
@@ -66,7 +68,7 @@ graphique
 
 ```
 
-## Prévisions météo pour Tahiti
+### Prévisions météo pour Tahiti
 
 ```{r}
 #| warning: false
@@ -78,4 +80,3 @@ graphique <- visualiser_temperatures(meteo)
 graphique
 
 ```
-

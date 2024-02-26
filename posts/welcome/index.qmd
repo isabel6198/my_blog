@@ -2,13 +2,11 @@
 title: "Bienvenue sur mon Blog"
 author: "Isabel PALACIO"
 date: "2024-02-22"
-categories: [R, Stats]
+categories: [Bienvenue]
 ---
 
-# Bienvenue !
+Je suis ravie de vous accueillir sur mon blog, où je retrace mon parcours académique à travers mon master ECAP (Économétrie et Statistique), une formation axée sur l'analyse de données et la programmation.
 
-Je suis ravie de vous accueillir sur mon blog où je documente mon parcours en data science et programmation.
+Avant de nous lancer, je tenais à partager avec vous une image des frailejones :)
 
 ![](frailejon.png)
-
-

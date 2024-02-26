@@ -1,10 +1,45 @@
 [
   {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "Le package olympicsWeather offre une solution simple et interactive pour accéder aux prévisions météorologiques des sites olympiques. Utilisant des graphiques interactifs, il permet aux utilisateurs d’explorer en profondeur les données météorologiques.\n\n\n\nGraphiques interactifs : Grâce à plotly, le package produit des visualisations interactives des données météorologiques, améliorant ainsi l’expérience utilisateur par une exploration dynamique des prévisions.\nFacilité d’utilisation : Les prévisions sont accessibles via des coordonnées GPS ou des noms de lieux, facilitant l’accès aux données météorologiques sans expertise technique spécifique.\nIntégration de packages R : olympicsWeather s’appuie sur des packages tels que httr pour les requêtes web, jsonlite pour le traitement JSON, et tibble pour la manipulation de données, optimisant ainsi le processus d’analyse.\n\n\n\n\nLe package olympicsWeather est disponible sur GitHub et peut être installé en utilisant le package remotes. Si vous n’avez pas encore installé remotes, commencez par le faire avec la commande install.packages(\"remotes\").\nEnsuite, installez olympicsWeather en utilisant la commande suivante :\n\nremotes::install_github(\"isabel6198/olympicsWeather\")"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#librairie-olympicsweather",
+    "href": "posts/post-with-code/index.html#librairie-olympicsweather",
+    "title": "Post With Code",
+    "section": "",
+    "text": "Le package olympicsWeather offre une solution simple et interactive pour accéder aux prévisions météorologiques des sites olympiques. Utilisant des graphiques interactifs, il permet aux utilisateurs d’explorer en profondeur les données météorologiques.\n\n\n\nGraphiques interactifs : Grâce à plotly, le package produit des visualisations interactives des données météorologiques, améliorant ainsi l’expérience utilisateur par une exploration dynamique des prévisions.\nFacilité d’utilisation : Les prévisions sont accessibles via des coordonnées GPS ou des noms de lieux, facilitant l’accès aux données météorologiques sans expertise technique spécifique.\nIntégration de packages R : olympicsWeather s’appuie sur des packages tels que httr pour les requêtes web, jsonlite pour le traitement JSON, et tibble pour la manipulation de données, optimisant ainsi le processus d’analyse.\n\n\n\n\nLe package olympicsWeather est disponible sur GitHub et peut être installé en utilisant le package remotes. Si vous n’avez pas encore installé remotes, commencez par le faire avec la commande install.packages(\"remotes\").\nEnsuite, installez olympicsWeather en utilisant la commande suivante :\n\nremotes::install_github(\"isabel6198/olympicsWeather\")"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#prévisions",
+    "href": "posts/post-with-code/index.html#prévisions",
+    "title": "Post With Code",
+    "section": "Prévisions",
+    "text": "Prévisions\n\nPrévisions météo à 7 jours pour le stade de France\n\n# librairie \nlibrary(olympicsWeather)\n\n\n# Obtenir les prévisions météorologiques à partir d'un lieu exacte\nmeteo &lt;- get_forecast(\"Stade de France, Saint-Denis, France\")\nmeteo\n\n# A tibble: 168 × 5\n   date_heure          temperature_celsius temperature_ressentie\n   &lt;dttm&gt;                            &lt;dbl&gt;                 &lt;dbl&gt;\n 1 2024-02-26 00:00:00                 8.2                   6.3\n 2 2024-02-26 01:00:00                 8.4                   6.4\n 3 2024-02-26 02:00:00                 8.3                   6.4\n 4 2024-02-26 03:00:00                 8.5                   6.7\n 5 2024-02-26 04:00:00                 8.3                   6.6\n 6 2024-02-26 05:00:00                 8.2                   6.7\n 7 2024-02-26 06:00:00                 8.1                   6.8\n 8 2024-02-26 07:00:00                 7.8                   6.2\n 9 2024-02-26 08:00:00                 8                     6.3\n10 2024-02-26 09:00:00                 9.2                   7.2\n# ℹ 158 more rows\n# ℹ 2 more variables: precipitation_proba &lt;int&gt;, precipitation_mm &lt;dbl&gt;\n\n# Visualer les données\ngraphique &lt;- visualiser_temperatures(meteo)\ngraphique\n\n\n\n\n\n\n\nPrévisions météo pour les coordonnées GPS\n\n# Obtenir les prévisions météorologiques à partir de Coordonnées GPS \ngps &lt;- c( 43.276703, 5.334791)\n\n# Obtenir les prévisions météorologiques\nmeteo &lt;- get_forecast(gps)\nmeteo\n\n# A tibble: 168 × 5\n   date_heure          temperature_celsius temperature_ressentie\n   &lt;dttm&gt;                            &lt;dbl&gt;                 &lt;dbl&gt;\n 1 2024-02-26 00:00:00                13.1                  10.4\n 2 2024-02-26 01:00:00                13.1                   9.2\n 3 2024-02-26 02:00:00                12.9                  10.1\n 4 2024-02-26 03:00:00                12.6                  11  \n 5 2024-02-26 04:00:00                11.8                   8.9\n 6 2024-02-26 05:00:00                12.4                   9.7\n 7 2024-02-26 06:00:00                12.3                   9.9\n 8 2024-02-26 07:00:00                11.8                   9.3\n 9 2024-02-26 08:00:00                11.9                  10.3\n10 2024-02-26 09:00:00                11.4                  10.6\n# ℹ 158 more rows\n# ℹ 2 more variables: precipitation_proba &lt;int&gt;, precipitation_mm &lt;dbl&gt;\n\n# Visualer les données\ngraphique &lt;- visualiser_temperatures(meteo)\ngraphique\n\n\n\n\n\n\n\nPrévisions météo pour Tahiti\n\n# Obtenir les prévisions météorologiques \nmeteo &lt;- get_forecast(\"Tahiti\")\n# Visualer les données\ngraphique &lt;- visualiser_temperatures(meteo)\ngraphique"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Bienvenue sur mon Blog",
+    "section": "",
+    "text": "Je suis ravie de vous accueillir sur mon blog, où je retrace mon parcours académique à travers mon master ECAP (Économétrie et Statistique), une formation axée sur l’analyse de données et la programmation.\nAvant de nous lancer, je tenais à partager avec vous une image des frailejones :)"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "À Propos",
     "section": "",
     "text": "Ce premier blog est le résultat du cours de R avancé donné dans le cadre du master 1er Année ECAP, du IAE de Nantes."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science avec Isabel",
+    "section": "",
+    "text": "Bienvenue sur mon blog ! Ici, je partage mes projets, sur tout ce qui touche à l’analyse de données, la programmation en R et Python, et bien plus. Restez à jour en explorant mes derniers articles ci-dessous.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTD_1_3\n\n\n\n\n\n\nTD\n\n\n\n\n\n\n\n\n\nFeb 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nPackage olympicsWeather\n\n\n\n\n\n\n\n\n\nFeb 25, 2024\n\n\nIsabel\n\n\n\n\n\n\n\n\n\n\n\n\nBienvenue sur mon Blog\n\n\n\n\n\n\nBienvenue\n\n\n\n\n\n\n\n\n\nFeb 22, 2024\n\n\nIsabel PALACIO\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Excercices-TD/TD_1-3.html",
@@ -187,40 +222,5 @@
     "title": "TD_1_3",
     "section": "Question 11",
     "text": "Question 11\nQuelle est la discipline des JO d’été dont la taille des athlètes féminines est la plus grande ? Quelle a été cette discipline au cours de chacune des éditions ? Calculez le nombre de fois où chaque discipline a été la discipline avec les plus grandes athlètes.\n\nfemmes_taille_sport &lt;- olympics_athletes |&gt;\n  filter(Sex == \"F\", isSummer == TRUE)|&gt;\n  group_by(Sport) |&gt;\n  summarise(taille_moyenne = mean(Height, na.rm = TRUE)) |&gt;\n  arrange(desc(taille_moyenne))|&gt;\n  slice(1)\n\nfemmes_taille_sport\n\n# A tibble: 1 × 2\n  Sport      taille_moyenne\n  &lt;chr&gt;               &lt;dbl&gt;\n1 Basketball           182.\n\n\n\ndiscipline_plus_grandes_par_edition &lt;- olympics_athletes |&gt;\n  filter(Sex == \"F\", isSummer == TRUE) |&gt;\n  group_by(Year, Sport) |&gt;\n  summarise(taille_moyenne = mean(Height, na.rm = TRUE), .groups = \"drop\") |&gt;\n  # Filtrer les lignes où la taille moyenne n'est pas NaN\n  filter(!is.na(taille_moyenne)) |&gt;\n  group_by(Year) |&gt;\n  slice_max(order_by = taille_moyenne, n = 1) |&gt;\n  ungroup()\n\ndiscipline_plus_grandes_par_edition\n\n# A tibble: 23 × 3\n    Year Sport         taille_moyenne\n   &lt;int&gt; &lt;chr&gt;                  &lt;dbl&gt;\n 1  1920 Swimming                166.\n 2  1924 Fencing                 168.\n 3  1928 Fencing                 172.\n 4  1932 Fencing                 173.\n 5  1936 Fencing                 178 \n 6  1948 Swimming                172.\n 7  1952 Athletics               168.\n 8  1956 Equestrianism           170.\n 9  1960 Athletics               169.\n10  1964 Volleyball              171.\n# ℹ 13 more rows"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "Le package olympicsWeather offre une solution simple et interactive pour accéder aux prévisions météorologiques des sites olympiques. Utilisant des graphiques interactifs, il permet aux utilisateurs d’explorer en profondeur les données météorologiques.\n\n\n\nGraphiques interactifs : Grâce à plotly, le package produit des visualisations interactives des données météorologiques, améliorant ainsi l’expérience utilisateur par une exploration dynamique des prévisions.\nFacilité d’utilisation : Les prévisions sont accessibles via des coordonnées GPS ou des noms de lieux, facilitant l’accès aux données météorologiques sans expertise technique spécifique.\nIntégration de packages R : olympicsWeather s’appuie sur des packages tels que httr pour les requêtes web, jsonlite pour le traitement JSON, et tibble pour la manipulation de données, optimisant ainsi le processus d’analyse.\n\n\n\n\nLe package olympicsWeather est disponible sur GitHub et peut être installé en utilisant le package remotes. Si vous n’avez pas encore installé remotes, commencez par le faire avec la commande install.packages(\"remotes\").\nEnsuite, installez olympicsWeather en utilisant la commande suivante :\n\nremotes::install_github(\"isabel6198/olympicsWeather\")"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#librairie-olympicsweather",
-    "href": "posts/post-with-code/index.html#librairie-olympicsweather",
-    "title": "Post With Code",
-    "section": "",
-    "text": "Le package olympicsWeather offre une solution simple et interactive pour accéder aux prévisions météorologiques des sites olympiques. Utilisant des graphiques interactifs, il permet aux utilisateurs d’explorer en profondeur les données météorologiques.\n\n\n\nGraphiques interactifs : Grâce à plotly, le package produit des visualisations interactives des données météorologiques, améliorant ainsi l’expérience utilisateur par une exploration dynamique des prévisions.\nFacilité d’utilisation : Les prévisions sont accessibles via des coordonnées GPS ou des noms de lieux, facilitant l’accès aux données météorologiques sans expertise technique spécifique.\nIntégration de packages R : olympicsWeather s’appuie sur des packages tels que httr pour les requêtes web, jsonlite pour le traitement JSON, et tibble pour la manipulation de données, optimisant ainsi le processus d’analyse.\n\n\n\n\nLe package olympicsWeather est disponible sur GitHub et peut être installé en utilisant le package remotes. Si vous n’avez pas encore installé remotes, commencez par le faire avec la commande install.packages(\"remotes\").\nEnsuite, installez olympicsWeather en utilisant la commande suivante :\n\nremotes::install_github(\"isabel6198/olympicsWeather\")"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html#prévisions",
-    "href": "posts/post-with-code/index.html#prévisions",
-    "title": "Post With Code",
-    "section": "Prévisions",
-    "text": "Prévisions\n\nPrévisions météo à 7 jours pour le stade de France\n\n# librairie \nlibrary(olympicsWeather)\n\n\n# Obtenir les prévisions météorologiques à partir d'un lieu exacte\nmeteo &lt;- get_forecast(\"Stade de France, Saint-Denis, France\")\nmeteo\n\n# A tibble: 168 × 5\n   date_heure          temperature_celsius temperature_ressentie\n   &lt;dttm&gt;                            &lt;dbl&gt;                 &lt;dbl&gt;\n 1 2024-02-26 00:00:00                 8.2                   6.3\n 2 2024-02-26 01:00:00                 8.4                   6.4\n 3 2024-02-26 02:00:00                 8.3                   6.4\n 4 2024-02-26 03:00:00                 8.5                   6.7\n 5 2024-02-26 04:00:00                 8.3                   6.6\n 6 2024-02-26 05:00:00                 8.2                   6.7\n 7 2024-02-26 06:00:00                 8.1                   6.8\n 8 2024-02-26 07:00:00                 7.8                   6.2\n 9 2024-02-26 08:00:00                 8                     6.3\n10 2024-02-26 09:00:00                 9.2                   7.2\n# ℹ 158 more rows\n# ℹ 2 more variables: precipitation_proba &lt;int&gt;, precipitation_mm &lt;dbl&gt;\n\n# Visualer les données\ngraphique &lt;- visualiser_temperatures(meteo)\ngraphique\n\n\n\n\n\n\n\nPrévisions météo pour les coordonnées GPS\n\n# Obtenir les prévisions météorologiques à partir de Coordonnées GPS \ngps &lt;- c( 43.276703, 5.334791)\n\n# Obtenir les prévisions météorologiques\nmeteo &lt;- get_forecast(gps)\nmeteo\n\n# A tibble: 168 × 5\n   date_heure          temperature_celsius temperature_ressentie\n   &lt;dttm&gt;                            &lt;dbl&gt;                 &lt;dbl&gt;\n 1 2024-02-26 00:00:00                13.1                  10.4\n 2 2024-02-26 01:00:00                13.1                   9.2\n 3 2024-02-26 02:00:00                12.9                  10.1\n 4 2024-02-26 03:00:00                12.6                  11  \n 5 2024-02-26 04:00:00                11.8                   8.9\n 6 2024-02-26 05:00:00                12.4                   9.7\n 7 2024-02-26 06:00:00                12.3                   9.9\n 8 2024-02-26 07:00:00                11.8                   9.3\n 9 2024-02-26 08:00:00                11.9                  10.3\n10 2024-02-26 09:00:00                11.4                  10.6\n# ℹ 158 more rows\n# ℹ 2 more variables: precipitation_proba &lt;int&gt;, precipitation_mm &lt;dbl&gt;\n\n# Visualer les données\ngraphique &lt;- visualiser_temperatures(meteo)\ngraphique\n\n\n\n\n\n\n\nPrévisions météo pour Tahiti\n\n# Obtenir les prévisions météorologiques \nmeteo &lt;- get_forecast(\"Tahiti\")\n# Visualer les données\ngraphique &lt;- visualiser_temperatures(meteo)\ngraphique"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Bienvenue sur mon Blog",
-    "section": "",
-    "text": "Je suis ravie de vous accueillir sur mon blog, où je retrace mon parcours académique à travers mon master ECAP (Économétrie et Statistique), une formation axée sur l’analyse de données et la programmation.\nAvant de nous lancer, je tenais à partager avec vous une image des frailejones :)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Science avec Isabel",
-    "section": "",
-    "text": "Bienvenue sur mon blog ! Ici, je partage mes projets, sur tout ce qui touche à l’analyse de données, la programmation en R et Python, et bien plus. Restez à jour en explorant mes derniers articles ci-dessous.\n\n\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nPackage olympicsWeather\n\n\n\n\n\n\n\n\n\n\n\nFeb 25, 2024\n\n\nIsabel\n\n\n\n\n\n\n  \n\n\n\n\nTD_1_3\n\n\n\n\n\n\n\nTD\n\n\n\n\n\n\n\n\n\n\n\nFeb 25, 2024\n\n\n\n\n\n\n  \n\n\n\n\nBienvenue sur mon Blog\n\n\n\n\n\n\n\nBienvenue\n\n\n\n\n\n\n\n\n\n\n\nFeb 22, 2024\n\n\nIsabel PALACIO\n\n\n\n\n\n\nNo matching items"
   }
 ]

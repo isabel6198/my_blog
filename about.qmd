@@ -1,6 +1,7 @@
 ---
 title: "À Propos"
 image: profile.jpeg
+image_credit: "Christian Spencer"
 about:
   template: jolla
   links:

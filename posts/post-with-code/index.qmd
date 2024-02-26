@@ -1,17 +1,23 @@
 ---
-title: "Post With Code"
+title: "Package olympicsWeather"
 author: "Isabel"
-format: html
+format: 
+  html:
+    toc: true
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
 date: "2024-02-25"
 image: "image.jpg"
-categories: [Package olympicsWeather]
+categories: [Package]
 ---
-
-## Librairie olympicsWeather
 
 Le package `olympicsWeather` offre une solution simple et interactive pour accéder aux prévisions météorologiques des sites olympiques. Utilisant des graphiques interactifs, il permet aux utilisateurs d'explorer en profondeur les données météorologiques.
 
-### Caractéristiques principales
+![](chat-leur.png)<br>
+<small>*© Illustration AdobeStock *</small>
+
+## Caractéristiques
 
 -   **Graphiques interactifs** : Grâce à `plotly`, le package produit des visualisations interactives des données météorologiques, améliorant ainsi l'expérience utilisateur par une exploration dynamique des prévisions.
 
@@ -19,7 +25,7 @@ Le package `olympicsWeather` offre une solution simple et interactive pour accé
 
 -   **Intégration de packages R** : `olympicsWeather` s'appuie sur des packages tels que `httr` pour les requêtes web, `jsonlite` pour le traitement JSON, et `tibble` pour la manipulation de données, optimisant ainsi le processus d'analyse.
 
-### Installation
+## Installation
 
 Le package `olympicsWeather` est disponible sur GitHub et peut être installé en utilisant le package `remotes`. Si vous n'avez pas encore installé `remotes`, commencez par le faire avec la commande `install.packages("remotes")`.
 
@@ -32,9 +38,9 @@ remotes::install_github("isabel6198/olympicsWeather")
 
 ```
 
-## Prévisions
+## Exemples
 
-### Prévisions météo à 7 jours pour le stade de France
+### Site: le stade de France
 
 ```{r}
 #| warning: false
@@ -51,7 +57,7 @@ graphique
 
 ```
 
-### Prévisions météo pour les coordonnées GPS
+### Coordonnées GPS
 
 ```{r}
 #| warning: false
@@ -68,7 +74,7 @@ graphique
 
 ```
 
-### Prévisions météo pour Tahiti
+### Tahiti
 
 ```{r}
 #| warning: false
@@ -80,3 +86,5 @@ graphique <- visualiser_temperatures(meteo)
 graphique
 
 ```
+
+(©Illustration AdobeStock)

@@ -9,7 +9,6 @@ format:
 editor: visual
 date: "2024-02-25"
 image: "exercice.png"
-image_credit: "Christian Spencer"
 categories: [TD]
 author: "Isabel"
 ---

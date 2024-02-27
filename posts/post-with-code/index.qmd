@@ -14,8 +14,7 @@ categories: [Package]
 
 Le package `olympicsWeather` offre une solution simple et interactive pour accéder aux prévisions météorologiques des sites olympiques. Utilisant des graphiques interactifs, il permet aux utilisateurs d'explorer en profondeur les données météorologiques.
 
-![](chat-leur.png)<br>
-<small>*© Illustration AdobeStock *</small>
+![](chat-leur.png)<br> <small>*© Illustration AdobeStock* </small>
 
 ## Caractéristiques
 
@@ -87,4 +86,4 @@ graphique
 
 ```
 
-(©Illustration AdobeStock)
+

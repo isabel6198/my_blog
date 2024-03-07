@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://isabel6198.github.io/my_blog/about.html</loc>
+    <lastmod>2024-03-07T10:10:54.532Z</lastmod>
+  </url>
+  <url>
     <loc>https://isabel6198.github.io/my_blog/posts/post-with-code/index.html</loc>
-    <lastmod>2024-02-27T09:55:48.011Z</lastmod>
+    <lastmod>2024-03-07T10:10:54.844Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isabel6198.github.io/my_blog/posts/Excercices-TD/Questions.html</loc>
+    <lastmod>2024-03-07T10:10:54.560Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isabel6198.github.io/my_blog/posts/Excercices-TD/semaine_3.html</loc>
+    <lastmod>2024-03-07T10:10:54.840Z</lastmod>
   </url>
   <url>
     <loc>https://isabel6198.github.io/my_blog/posts/welcome/index.html</loc>
-    <lastmod>2024-02-27T09:55:48.015Z</lastmod>
+    <lastmod>2024-03-07T10:10:54.844Z</lastmod>
   </url>
   <url>
-    <loc>https://isabel6198.github.io/my_blog/about.html</loc>
-    <lastmod>2024-02-27T09:55:47.707Z</lastmod>
+    <loc>https://isabel6198.github.io/my_blog/posts/Excercices-TD/semaine_2.html</loc>
+    <lastmod>2024-03-07T10:10:54.840Z</lastmod>
+  </url>
+  <url>
+    <loc>https://isabel6198.github.io/my_blog/posts/Excercices-TD/semaine_1.html</loc>
+    <lastmod>2024-03-07T10:10:54.840Z</lastmod>
   </url>
   <url>
     <loc>https://isabel6198.github.io/my_blog/index.html</loc>
-    <lastmod>2024-02-27T09:55:47.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://isabel6198.github.io/my_blog/posts/Excercices-TD/TD_1-3.html</loc>
-    <lastmod>2024-02-27T09:55:47.731Z</lastmod>
+    <lastmod>2024-03-07T10:10:54.560Z</lastmod>
   </url>
 </urlset>

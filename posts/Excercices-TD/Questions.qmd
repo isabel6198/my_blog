@@ -192,3 +192,12 @@ La fonction install_github() du package remotes va :
 -   Le fichier .gitignore a été complété avec les fichiers qui ne doivent pas être versionnés.
 
 -   Suite au commit, le dossier \_site apparaît comme prévu. Cependant, j'ai rencontré un problème : pour publier ma page, GitHub ne propose de pointer que sur les dossiers racine (root) ou sur \_docs et non \_site, tel qu'indiqué dans le tutoriel du projet. Pour contourner ce problème, un dossier \_docs a été créé et utilisé pour la publication de la page.
+
+# Bonus
+
+J'ai créé une nouvelle branche en plus de ma branche principale appelée "site", qui sert de support pour mon site. J'ai également mis en place le workflow GitHub Actions et la branche "gh-pages" pour mettre à jour ma page à chaque commit :)
+
+![](workflow.png)
+
+
+

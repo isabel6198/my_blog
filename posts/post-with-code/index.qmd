@@ -37,6 +37,24 @@ remotes::install_github("isabel6198/olympicsWeather")
 
 ```
 
+## Fonctions
+
+Les fonctions qui sont incluses dans le package sont :
+
+-   **`perform_request`**: Envoie une requête à l'API Open-Meteo avec des coordonnées GPS et retourne les données météorologiques horaires sous forme de tibble.
+
+-   **`unnest_data`**: Transforme les données météorologiques brutes en un tibble structuré, extrayant des informations telles que la date, l'heure, et les températures.
+
+-   **`get_forecast`**: Fonction générique qui, selon le type d'entrée (adresse ou coordonnées GPS), renvoie des prévisions météorologiques sous forme de tibble.
+
+-   **`address_to_gps`** et **`get_gps_coordinate`**: Convertissent une adresse textuelle en coordonnées GPS à l'aide du service de géocodage OpenStreetMap.
+
+-   **`get_forecast.numeric`** et **`get_forecast.character`**: Spécialisent **`get_forecast`** pour traiter respectivement des coordonnées GPS numériques et des adresses textuelles, renvoyant les prévisions météorologiques pour l'emplacement spécifié.
+
+-   **`visualiser_temperatures`**: Crée un graphique interactif avec **`plotly`** à partir d'un tibble météorologique, affichant la température et la température ressentie au fil du temps.
+
+Chaque fonction est conçue pour simplifier l'accès et la manipulation des données météorologiques, depuis la récupération des informations depuis une API externe jusqu'à la visualisation interactive des prévisions.
+
 ## Exemples
 
 ### Site: le stade de France
@@ -85,5 +103,3 @@ graphique <- visualiser_temperatures(meteo)
 graphique
 
 ```
-
-

@@ -35,7 +35,7 @@ getwd()
 
 ```{r}
 #| echo: false
-setwd("/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Excercices-TD")
+setwd("/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Exercices-TD")
 ```
 
 # Semaine 3 - Exercices
@@ -157,8 +157,6 @@ resultat
 
 ## 11. Quelle est la discipline des JO d’été dont la taille des athlètes féminines est la plus grande ?
 
-
-
 ```{r}
 femmes_taille_sport <- olympics_athletes |>
   filter(Sex == "F", isSummer == TRUE)|>
@@ -173,8 +171,8 @@ cat('La discipline avec la plus grande taille moyenne des athlètes féminines e
 
 ```
 
-
 Quelle a été cette discipline au cours de chacune des éditions ? Calculez le nombre de fois où chaque discipline a été la discipline avec les plus grandes athlètes.
+
 ```{r}
 discipline_plus_grandes_par_edition <- olympics_athletes |>
   filter(Sex == "F", isSummer == TRUE) |>

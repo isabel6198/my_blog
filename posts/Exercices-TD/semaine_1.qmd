@@ -49,7 +49,7 @@ getwd()
 
 ```{r}
 #| echo: false
-setwd("/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Excercices-TD")
+setwd("/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Exercices-TD")
 ```
 
 # Exercices

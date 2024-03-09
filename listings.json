@@ -2,11 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/Excercices-TD/semaine_3.html",
-      "/posts/Excercices-TD/semaine_2.html",
-      "/posts/Excercices-TD/Questions.html",
-      "/posts/Excercices-TD/semaine_1.html",
       "/posts/post-with-code/index.html",
+      "/posts/Exercices-TD/semaine_3.html",
+      "/posts/Exercices-TD/semaine_2.html",
+      "/posts/Exercices-TD/Questions.html",
+      "/posts/Exercices-TD/semaine_1.html",
       "/posts/welcome/index.html"
     ]
   }

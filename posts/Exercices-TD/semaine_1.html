@@ -220,7 +220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="td-1" class="level1">
 <h1>TD 1</h1>
 <p><br>
-Dans cette section, vous trouverez les solutions pour les exercices des semaines 1, 2 et 3, ainsi que les réponses aux questions posées dans l’exercice 4 et au cours de l’élaboration du projet.</p>
+Dans la section TD, vous trouverez les solutions aux exercices des semaines 1, 2 et 3, ainsi que les réponses aux questions posées dans l’exercice 4 et pendant l’élaboration du projet. Pour faciliter la navigation dans le code et les réponses, vous pouvez utiliser soit la barre de recherche, soit la table des matières interactive située sur votre droite.</p>
 <p>Voici quelques précisions avant de commencer :</p>
 <ul>
 <li><p>Il est important de noter que toutes les librairies nécessaires à la réalisation de ces exercices sont téléchargées dans la première partie. (l’installation de certains packages peut être requise avant l’utilisation de la librairie)</p></li>
@@ -240,7 +240,7 @@ Dans cette section, vous trouverez les solutions pour les exercices des semaines
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># penser à vérifer le chemin de travail et à le corriger si necessaire </span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Excercices-TD"</code></pre>
+<pre><code>[1] "/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Exercices-TD"</code></pre>
 </div>
 </div>
 </section>
@@ -526,7 +526,7 @@ Bonus - carte
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Avec la question 11, nous arrivons à la fin des exercices de la semaine 1. Avant de continuer avec les exercices de la semaine 2, nous pouvons créer un graphique qui utilise le dataframe barycentre_adresse et la fonction leaflet pour visualiser sur une carte l’adresse que nous avons obtenuetre_adresse et la fonction leaflet pour visualiser dans une carte l’adresse que nous avons obtenue.</p>
+<p>Avec la question 11, nous concluons les exercices de la semaine 1. Avant de passer aux exercices de la semaine 2, nous pouvons créer un graphique en utilisant le dataframe barycentre_adresse et la fonction leaflet pour afficher sur une carte l’adresse que nous avons obtenue</p>
 </div>
 </div>
 <div class="cell">
@@ -534,8 +534,8 @@ Bonus - carte
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span></span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="sc">~</span>long, <span class="sc">~</span>lat, <span class="at">popup =</span> <span class="sc">~</span>address)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-942b94db9b832886e0a2" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-942b94db9b832886e0a2">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[48.8668434516129,2.297569580645161,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"23, Avenue Pierre 1er de Serbie, Quartier de Chaillot, Paris 16e Arrondissement, Paris, Île-de-France, France métropolitaine, 75116, France",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[48.8668434516129,48.8668434516129],"lng":[2.297569580645161,2.297569580645161]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-9f8bf57cc10dc947d230" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-9f8bf57cc10dc947d230">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[48.8668434516129,2.297569580645161,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"23, Avenue Pierre 1er de Serbie, Quartier de Chaillot, Paris 16e Arrondissement, Paris, Île-de-France, France métropolitaine, 75116, France",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[48.8668434516129,48.8668434516129],"lng":[2.297569580645161,2.297569580645161]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

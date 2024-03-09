@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#librairies" id="toc-librairies" class="nav-link active" data-scroll-target="#librairies">Librairies</a></li>
-  <li><a href="#semaine-3---excercices" id="toc-semaine-3---excercices" class="nav-link" data-scroll-target="#semaine-3---excercices">Semaine 3 - Excercices</a>
+  <li><a href="#semaine-3---exercices" id="toc-semaine-3---exercices" class="nav-link" data-scroll-target="#semaine-3---exercices">Semaine 3 - Exercices</a>
   <ul class="collapse">
   <li><a href="#questions-n" id="toc-questions-n" class="nav-link" data-scroll-target="#questions-n">Questions N°</a></li>
   <li><a href="#listez-les-fichiers-présents-dans-le-dossier-data.-quelles-sont-les-extensions-des-différents-fichiers" id="toc-listez-les-fichiers-présents-dans-le-dossier-data.-quelles-sont-les-extensions-des-différents-fichiers" class="nav-link" data-scroll-target="#listez-les-fichiers-présents-dans-le-dossier-data.-quelles-sont-les-extensions-des-différents-fichiers">1. Listez les fichiers présents dans le dossier data. Quelles sont les extensions des différents fichiers ?</a></li>
@@ -226,12 +226,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># penser à vérifer le chemin de travail et à le corriger si necessaire </span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Excercices-TD"</code></pre>
+<pre><code>[1] "/Users/Isabel/Desktop/Cours/R avancé/my_blog/posts/Exercices-TD"</code></pre>
 </div>
 </div>
 </section>
-<section id="semaine-3---excercices" class="level1">
-<h1>Semaine 3 - Excercices</h1>
+<section id="semaine-3---exercices" class="level1">
+<h1>Semaine 3 - Exercices</h1>
 <section id="questions-n" class="level2">
 <h2 class="anchored" data-anchor-id="questions-n">Questions N°</h2>
 <p>Pour ce td l’installation de plusieurs librairies a été necessaire, “stringr”, “lubridate”, “arrow”, “dplyr”, “tidyr”, “jsonlite”, “RSQLite”.</p>
@@ -399,7 +399,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="quelle-est-la-discipline-des-jo-dété-dont-la-taille-des-athlètes-féminines-est-la-plus-grande" class="level2">
 <h2 class="anchored" data-anchor-id="quelle-est-la-discipline-des-jo-dété-dont-la-taille-des-athlètes-féminines-est-la-plus-grande">11. Quelle est la discipline des JO d’été dont la taille des athlètes féminines est la plus grande ?</h2>
-<p>Quelle a été cette discipline au cours de chacune des éditions ? Calculez le nombre de fois où chaque discipline a été la discipline avec les plus grandes athlètes.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>femmes_taille_sport <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Sex <span class="sc">==</span> <span class="st">"F"</span>, isSummer <span class="sc">==</span> <span class="cn">TRUE</span>)<span class="sc">|&gt;</span></span>
@@ -415,19 +414,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   &lt;chr&gt;               &lt;dbl&gt;
 1 Basketball           182.</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">'La discipline avec la plus grande taille moyenne des athlètes féminines est :'</span>, femmes_taille_sport<span class="sc">$</span>Sport, <span class="st">'avec une taille moyenne de'</span>, <span class="fu">round</span>(femmes_taille_sport<span class="sc">$</span>taille_moyenne, <span class="dv">2</span>), <span class="st">'cm.</span><span class="sc">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La discipline avec la plus grande taille moyenne des athlètes féminines est : Basketball avec une taille moyenne de 182.45 cm.</code></pre>
 </div>
+</div>
+<p>Quelle a été cette discipline au cours de chacune des éditions ? Calculez le nombre de fois où chaque discipline a été la discipline avec les plus grandes athlètes.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>discipline_plus_grandes_par_edition <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Sex <span class="sc">==</span> <span class="st">"F"</span>, isSummer <span class="sc">==</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year, Sport) <span class="sc">|&gt;</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">taille_moyenne =</span> <span class="fu">mean</span>(Height, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filtrer les lignes où la taille moyenne n'est pas NaN</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(taille_moyenne)) <span class="sc">|&gt;</span></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">|&gt;</span></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">order_by =</span> taille_moyenne, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>discipline_plus_grandes_par_edition</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>discipline_plus_grandes_par_edition <span class="ot">&lt;-</span> olympics_athletes <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Sex <span class="sc">==</span> <span class="st">"F"</span>, isSummer <span class="sc">==</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year, Sport) <span class="sc">|&gt;</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">taille_moyenne =</span> <span class="fu">mean</span>(Height, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Filtrer les lignes où la taille moyenne n'est pas NaN</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(taille_moyenne)) <span class="sc">|&gt;</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">|&gt;</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">order_by =</span> taille_moyenne, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>discipline_plus_grandes_par_edition</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 23 × 3
     Year Sport         taille_moyenne
@@ -443,6 +447,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  9  1960 Athletics               169.
 10  1964 Volleyball              171.
 # ℹ 13 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>nombre_fois_sport <span class="ot">&lt;-</span> discipline_plus_grandes_par_edition <span class="sc">|&gt;</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Sport, <span class="at">name =</span> <span class="st">"Nombre_de_fois"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Nombre_de_fois))</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Nombre de fois où chaque discipline a été celle avec les athlètes féminines les plus grandes :</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Nombre de fois où chaque discipline a été celle avec les athlètes féminines les plus grandes :</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(nombre_fois_sport)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  Sport         Nombre_de_fois
+  &lt;chr&gt;                  &lt;int&gt;
+1 Basketball                10
+2 Fencing                    4
+3 Volleyball                 4
+4 Athletics                  2
+5 Swimming                   2
+6 Equestrianism              1</code></pre>
 </div>
 </div>
 

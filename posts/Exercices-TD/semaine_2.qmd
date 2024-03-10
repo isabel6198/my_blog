@@ -24,8 +24,6 @@ library(purrr)
 library(stringr)
 ```
 
-
-
 # Semaine 2 Exercices
 
 ## 1 . Lancer la commande suivante :
@@ -389,6 +387,8 @@ extraire_nationalite_athlete <- function(texte) {
 ```
 
 ```{r}
+#| warning: false
+
 resultats_nationalites <- lapply(data_medailles_sport_ete$Athletes_medailles, extraire_nationalite_athlete)
 
 nationalites_agg <- Reduce(`+`, resultats_nationalites)

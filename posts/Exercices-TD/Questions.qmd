@@ -116,11 +116,13 @@ Pour les coordonnées GPS, get_forecast.numeric prend le relai. Elle assure que 
 
 Enfin, pour une adresse, get_forecast.character permet d'obtenir les prévisions météorologiques en partant d'un texte. Elle vérifie d'abord que l'entrée est bien une chaîne de caractères, la convertit en coordonnées GPS, puis fait appel à get_forecast.numeric pour récupérer les prévisions. Le résultat est un tibble contenant les informations météorologiques pour l'adresse spécifiée.
 
-La documentation a été faite en utilisant les balises Roxygen et la description : ![](description.png)
+La documentation a été réalisée à l'aide des balises Roxygen, et la description a été complétée ainsi :
+
+![](description.png)
 
 ### Test
 
-Dans la partie test un jeu de données est crée pour tester la fonction, avec la meme structure que celle recu par perfom_request.
+Dans la partie consacrée aux tests, un jeu de données est créé pour tester la fonction, possédant la même structure que celle reçue par **`perform_request`**. Les tests ont été validés sans présenter de problèmes.
 
 ### Graphique
 

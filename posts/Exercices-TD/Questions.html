@@ -293,11 +293,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>La troisième étape est la fonction get_forecast, qui permet récupérer des prévisions météorologiques. Cette fonction générique gère différents types d’entrées, que ce soit une adresse ou des coordonnées GPS, en utilisant UseMethod pour orienter vers la méthode appropriée.</p>
 <p>Pour les coordonnées GPS, get_forecast.numeric prend le relai. Elle assure que l’entrée est un vecteur numérique de deux éléments, effectue une requête API météo avec ces coordonnées et structure la réponse obtenue en un tibble.</p>
 <p>Enfin, pour une adresse, get_forecast.character permet d’obtenir les prévisions météorologiques en partant d’un texte. Elle vérifie d’abord que l’entrée est bien une chaîne de caractères, la convertit en coordonnées GPS, puis fait appel à get_forecast.numeric pour récupérer les prévisions. Le résultat est un tibble contenant les informations météorologiques pour l’adresse spécifiée.</p>
-<p>La documentation a été faite en utilisant les balises Roxygen et la description : <img src="description.png" class="img-fluid"></p>
+<p>La documentation a été réalisée à l’aide des balises Roxygen, et la description a été complétée ainsi :</p>
+<p><img src="description.png" class="img-fluid"></p>
 </section>
 <section id="test" class="level3">
 <h3 class="anchored" data-anchor-id="test">Test</h3>
-<p>Dans la partie test un jeu de données est crée pour tester la fonction, avec la meme structure que celle recu par perfom_request.</p>
+<p>Dans la partie consacrée aux tests, un jeu de données est créé pour tester la fonction, possédant la même structure que celle reçue par <strong><code>perform_request</code></strong>. Les tests ont été validés sans présenter de problèmes.</p>
 </section>
 <section id="graphique" class="level3">
 <h3 class="anchored" data-anchor-id="graphique">Graphique</h3>
